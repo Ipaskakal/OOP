@@ -42,12 +42,12 @@
      </rect>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>370</y>
-      <width>231</width>
+      <y>330</y>
+      <width>241</width>
       <height>71</height>
      </rect>
     </property>
@@ -90,8 +90,8 @@
      <rect>
       <x>10</x>
       <y>150</y>
-      <width>99</width>
-      <height>17</height>
+      <width>181</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="orientation">
@@ -99,7 +99,7 @@
     </property>
     <widget class="QRadioButton" name="radioButton">
      <property name="text">
-      <string>Timer</string>
+      <string>Таймер</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">buttonGroup</string>
@@ -107,14 +107,14 @@
     </widget>
     <widget class="QRadioButton" name="radioButton_2">
      <property name="text">
-      <string>Alarm</string>
+      <string>Будильник</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">buttonGroup</string>
      </attribute>
     </widget>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>430</x>
@@ -124,6 +124,20 @@
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Время сигнала(чч:мм:сс)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Коментарий</string>
+       </property>
+      </widget>
+     </item>
      <item row="1" column="0" colspan="2">
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
@@ -134,28 +148,14 @@
        </item>
       </layout>
      </item>
-     <item row="0" column="1">
-      <widget class="QLabel" name="label_7">
-       <property name="text">
-        <string>Коментарий</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_6">
-       <property name="text">
-        <string>Время сигнала(чч:мм:сс)</string>
-       </property>
-      </widget>
-     </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>190</y>
-      <width>234</width>
+      <width>237</width>
       <height>106</height>
      </rect>
     </property>
@@ -205,13 +205,13 @@
      <item row="3" column="1">
       <widget class="QCheckBox" name="checkBox">
        <property name="text">
-        <string>Add to group</string>
+        <string>Добавить в группу</string>
        </property>
       </widget>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>370</x>

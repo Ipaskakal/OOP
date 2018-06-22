@@ -9,6 +9,8 @@
 #include <QTime>
 #include <QApplication>
 #include "timer.h"
+#include <QMouseEvent>
+
 
 namespace Ui {
 class MainWindow;
@@ -27,6 +29,8 @@ public:
     void fillTimer();
 
 private slots:
+
+    void closeEvent(QCloseEvent *event);
     void on_pushButton_4_clicked();
 
     void on_textEdit_textChanged();

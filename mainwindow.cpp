@@ -1,5 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QCloseEvent>
+#include <QFile>
+#include <QTextStream>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -24,6 +27,32 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+     QMessageBox::StandardButton ret;
+    ret = QMessageBox::question( this,  QApplication::applicationName(), tr(" Do you want to close programm ? "),
+                                 QMessageBox::Yes | QMessageBox::No , QMessageBox::No );
+    if (ret == QMessageBox::No)
+        event->ignore();
+    else{
+        QFile file("save.txt");
+        qDebug()<< "x";
+        if (file.open(QIODevice::WriteOnly | QIODevice::Text))
+        {
+
+            QTextStream out(&file);
+            for(int i=0;i<v.size();i++)
+            {
+                 out << v[i]->text<<" ";
+            }
+            qDebug()<< "x";
+
+        }
+       file.close();
+    }
+
 }
 
 //StartCurrent
@@ -236,3 +265,5 @@ void MainWindow::on_pushButton_9_clicked()
      ui->listWidget->item(current)->setBackgroundColor("red");
      fillTimer();
 }
+
+
